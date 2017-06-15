@@ -13,7 +13,25 @@
         var WORDS     = ["booger", "apple", "hackbright", "mango", "chocolate", "sloth", "popcorn"];
         var SCRAMBLED = ["oogreb", "papel", "backrhight", "goman", "ocetholac", "hlsto", "oocrnpp"];
 
+        
+
+        // function scramble(word) {
+
+        //     var word = word;
+
+        //     var jumbledWord = "";
+
+        //     // for (var i = 0; i < word.length; i++) {
+        //     // var Chindex = Math.floor(Math.random() * word.length);
+        //     // jumbledWord = jumbledWord + word.charAt(Chindex);
+        //     // word = word.substr(0, Chindex) + word.substr(Chindex + 1);
+        //     // }
+
+        //     return 
+    
+
         var playing = true;
+
 
         while (playing) {
 
@@ -24,6 +42,8 @@
             // Grab the corresponding scrambled word from the SCRAMBLED array.
 
             word = WORDS[index];
+            
+            // scrambledWord = scramble(word);
 
             scrambledWord = SCRAMBLED[index];
 
@@ -33,8 +53,9 @@
             var guess = prompt("The scrambled version of the word is " + scrambledWord + "." + " What's your guess?");
 
             // If the user guesses wrong, tell them they were wrong and show the right word.
+           
 
-            if (guess != word) {
+            if (guess.toLowerCase().trim() != word) {
                 alert("You are so wrong. The right word is " + word);
             } else {
                 alert("Yay! You are so right.");
